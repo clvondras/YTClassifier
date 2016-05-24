@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<head>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Youtube Channel Classifier</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="train">Train Classifier</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+	<h1>Youtube Channel Classifier</h1>
+  
+	<form method="post">
+		<div class="form-group">
+		    <label for="user">Channel ID</label>
+		    <input type="text" class="form-control" id="user" name="user" placeholder="Channel ID">
+		</div>
+		<input class="btn btn-primary" type="submit" value="Get Channel's Info" formaction="/query">
+	</form>
+	
+</div>
+</body>
+
+</html>

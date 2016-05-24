@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<head>
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="/">Youtube Channel Classifier</a>
+	    </div>
+	    <div>
+	      <ul class="nav navbar-nav">
+	        <li><a href="/">Home</a></li>
+	        <li><a href="train">Train Classifier</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div class="container">
+		<h1><a href="https://www.youtube.com/channel/{{user}}" target="_blank">{{title}}</a></h1>
+		<div class="well">
+		Total Subscribers: {{ total }}
+		<br>
+		Database stats:
+		
+		<br>
+		Gender: {{user_gender}}
+		<br>
+		Subscribers currently in database: {{ dbtotal }}
+		<br>
+		{% for type, count in counts %}
+			{{count}}/{{dbtotal}} {{type}}
+			<br>
+		{% endfor %}
+		<br>
+		<input class="btn btn-primary" type="submit" value="Male" onclick="window.location='/train/male/{{user}}';">
+		<input class="btn btn-primary" type="submit" value="Female" onclick="window.location='/train/female/{{user}}';">
+		<input class="btn btn-default" type="submit" value="Gender Neutral" onclick="window.location='/train/neutral/{{user}}';">
+		
+	</div>
+	</div>
+</body>
+
+</html>

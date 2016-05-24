@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<head>
+	<title>Classifier Training</title>
+	<script src="orientdb-api.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Youtube Channel Classifier</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li class="active"><a href="train">Train Classifier</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+	<center><h1>Train Classifier</h1></center>
+	<div>
+		<a href="https://www.youtube.com/channel/{{id}}" target="_blank"><img src={{ pic }}></a>
+		<a style="font-size: 28px; vertical-align: bottom;" href="https://www.youtube.com/channel/{{id}}" target="_blank">{{title}}</a>
+	</div>
+	<pre style="white-space: pre-line;"><span style="font-family: Arial;">{{ descript }}</span></pre>
+	
+	<input class="btn btn-primary" type="submit" value="Male" onclick="window.location='/train/male/{{id}}';">
+	<input class="btn btn-primary" type="submit" value="Female" onclick="window.location='/train/female/{{id}}';">
+	<input class="btn btn-default" type="submit" value="Gender Neutral" onclick="window.location='/train/neutral/{{id}}';">
+	
+</div>
+</body>
+
+</html>
